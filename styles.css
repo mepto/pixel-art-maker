@@ -1,0 +1,60 @@
+body {
+    background: rgb(60, 57, 61);
+    font-family: 'Cabin Sketch';
+    text-align: center;
+}
+
+h1 {
+    color: rgb(210, 68, 255);
+    font-family: 'Frijole';
+    font-size: 70px;
+    font-weight: 400;
+    margin: 0.2em;
+}
+
+h2 {
+    color: rgb(238, 194, 252);
+    font-weight: 400;
+    margin: 1em 0 0.25em;
+}
+
+h2:first-of-type {
+    margin-top: 0.5em;
+}
+
+form {
+    color: rgb(238, 194, 252)
+}
+
+table, tr, td {
+    border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+tr {
+    height: 20px;
+}
+
+td {
+    background: #fff;
+    min-width: 20px !important;
+    width: 20px !important;
+}
+
+input {
+    font-family: 'Cabin Sketch';
+}
+
+input[type=number] {
+    margin: 0 15px 0 2px;
+    width: 6em;
+}
+
+input[type=submit] {
+    border: 0;
+    color: rgb(210, 68, 255);
+}
