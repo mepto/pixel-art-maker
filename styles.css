@@ -47,6 +47,7 @@ td {
 
 input {
     font-family: 'Cabin Sketch';
+    font-size: 15px;
 }
 
 input[type=number] {
@@ -55,6 +56,18 @@ input[type=number] {
 }
 
 input[type=submit] {
+    background: rgb(238, 194, 252);
     border: 0;
     color: rgb(210, 68, 255);
+    padding: 3px 15px;
+}
+
+input[type=submit]:hover {
+    background: rgb(210, 68, 255);
+    color: rgb(238, 194, 252);
+}
+
+input[type=submit]:active {
+    background: rgb(137, 17, 175);
+    color: rgb(238, 194, 252);
 }
