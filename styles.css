@@ -21,18 +21,27 @@ h2 {
 h2:first-of-type {
     margin-top: 0.5em;
 }
+#hidden{
+    display: none;
+}
 
 form {
     color: rgb(238, 194, 252)
 }
 
-table, tr, td {
+.borders, .borders tr, .borders td {
     border: 1px solid black;
 }
 
+/*
+table#pixel_canvas, #pixel_canvas tr, #pixel_canvas td {
+    border: 1px solid black;
+}
+*/
+
 table {
     border-collapse: collapse;
-    margin: 0 auto;
+    margin: 0 auto 15px auto;
 }
 
 tr {
@@ -42,10 +51,11 @@ tr {
 td {
     background: #fff;
     min-width: 20px !important;
+    padding: 0;
     width: 20px !important;
 }
 
-input {
+input, button {
     font-family: 'Cabin Sketch';
     font-size: 15px;
 }
@@ -55,19 +65,24 @@ input[type=number] {
     width: 6em;
 }
 
-input[type=submit] {
+input[type=submit], button {
     background: rgb(238, 194, 252);
     border: 0;
     color: rgb(210, 68, 255);
     padding: 3px 15px;
 }
 
-input[type=submit]:hover {
+input[type=submit]:hover, button:hover {
     background: rgb(210, 68, 255);
-    color: rgb(238, 194, 252);
+    color: rgb(255, 255, 255);
 }
 
-input[type=submit]:active {
+input[type=submit]:active, button:active {
     background: rgb(137, 17, 175);
     color: rgb(238, 194, 252);
 }
+input[type=submit]:disabled, button:disabled {
+    background: rgb(162, 162, 162);
+    color: rgb(220, 220, 220);
+}
+
