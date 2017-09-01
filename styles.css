@@ -81,8 +81,5 @@ input[type=submit]:active, button:active {
     background: rgb(137, 17, 175);
     color: rgb(238, 194, 252);
 }
-input[type=submit]:disabled, button:disabled {
-    background: rgb(162, 162, 162);
-    color: rgb(220, 220, 220);
-}
+
 

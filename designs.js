@@ -1,4 +1,22 @@
+listenToForm();
+
+function listenToForm(){
+    document.getElementById('sizePicker').addEventListener('submit', function(e){
+        e.preventDefault();
+        makeGrid();
+    })
+}
+
+function removeFormListener() {
+    document.getElementById('sizePicker').removeEventListener('submit', function(e){
+        e.preventDefault();
+        makeGrid();
+    })
+    listenToForm();
+}
+
 function makeGrid() {
+    removeFormListener();
     event.preventDefault();
     //retrieve user input grid sizes and table
     const gridHeight = document.getElementById('input_height').value;
@@ -18,8 +36,7 @@ function makeGrid() {
 
     //launch listeners after tabla creation
     listenMousedown();
-    //activate disabled button for transformation into image
-    document.getElementById('makeImage').disabled = false;
+
 
     //retrieve cells
     const cellToPaint = grid.getElementsByTagName('td');
@@ -55,25 +72,4 @@ function makeGrid() {
     }
 }
 
-// elements to make canvas
-function makeCanvas() {
-    //remove table borders for crisp image
-    document.getElementById('pixel_canvas').classList.remove('borders');
-    //launch html2canvas script
-    html2canvas(document.getElementById("pixel_canvas"), {
-        allowTaint: true,
-        onrendered: function (canvas) {
-            var dataURL = canvas.toDataURL();
-            var image = new Image();
-            image.src = dataURL;
-            //create new window and insert data to it
-            let newWin = window.open('');
-            newWin.document.write('<title>Save your image</title><style>img{border: 1px solid #444;}</style> <p style="background:#ddd;font-family: sans-serif; margin:15px 0; padding:10px;">Right-click on the image to save your pixel art!</p>' + image.outerHTML);
 
-        }
-    });
-    //restore borders to table
-    document.getElementById('pixel_canvas').classList.add('borders');
-
-
-}
