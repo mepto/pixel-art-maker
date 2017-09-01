@@ -29,15 +29,9 @@ form {
     color: rgb(238, 194, 252)
 }
 
-.borders, .borders tr, .borders td {
+table, tr, td {
     border: 1px solid black;
 }
-
-/*
-table#pixel_canvas, #pixel_canvas tr, #pixel_canvas td {
-    border: 1px solid black;
-}
-*/
 
 table {
     border-collapse: collapse;

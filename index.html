@@ -13,8 +13,8 @@
     <h2>Choose Grid Size</h2>
     <form id="sizePicker">
         Grid Height:
-        <input type="number" id="input_height" name="height" min="1" value="12"> Grid Width:
-        <input type="number" id="input_width" name="width" min="1" value="12">
+        <input type="number" id="input_height" name="height" min="1" max="40" value="12" required> Grid Width:
+        <input type="number" id="input_width" name="width" min="1" value="12" max="40" required>
         <input type="submit">
     </form>
 
@@ -22,7 +22,7 @@
     <input type="color" id="colorPicker" name="favcolor" value="#ff0000">
 
     <h2>Design Canvas</h2>
-    <table id="pixel_canvas" class="borders">
+    <table id="pixel_canvas">
 
     </table>
 

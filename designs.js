@@ -37,7 +37,6 @@ function makeGrid() {
     //launch listeners after tabla creation
     listenMousedown();
 
-
     //retrieve cells
     const cellToPaint = grid.getElementsByTagName('td');
 
